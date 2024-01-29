@@ -8,18 +8,38 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <main>
-      <div id="todo-container">
-        <h1>Todo app</h1>
-        <input type="text" placeholder="Task name" />
-        <input type="date" />
-        <button>Add</button>
-        <div class="tasks">
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox">Drink Water</label>
+    <div id="todo-container">
+      <h1>Todo app</h1>
+      <div class="todo-input">
+        <input type="text" placeholder="Task name" id="todo-tasks" />
+        <div class="todo-add">
+          <input type="date" id="date-input" />
+          <button class="add-button">Add</button>
         </div>
       </div>
-    </main>
+
+      <div class="todo-buttons">
+        <div>
+          <button>All</button>
+          <button>Pendeing</button>
+          <button>Completed</button>
+        </div>
+        <button id="delete-all">Delete All</button>
+      </div>
+    </div>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
     <script src="./js/app.js"></script>
   </body>
