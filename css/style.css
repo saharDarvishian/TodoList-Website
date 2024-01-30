@@ -6,29 +6,26 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #030000;
+  background-color: #0b090a;
   height: 100vh;
-  font-family: sans-serif; 
-  color: #fff;
+  font-family: sans-serif;
+  color: #f8f9fa;
   width: 1000px;
-  margin: auto; 
+  margin: auto;
+  font-family: "Raleway-Regular";
 }
 
 #todo-container {
-  box-shadow: 0px 0px 13px 17px rgba(31,32,36,0.75);
--webkit-box-shadow: 0px 0px 13px 17px rgba(31,32,36,0.75);
--moz-box-shadow: 0px 0px 13px 17px rgba(31,32,36,0.75);
-  
- padding: 2px 20px 30px;
-  margin: 40px auto;
+  margin: 0 auto 40px;
   border-radius: 8px;
 }
 
 h1 {
-  font: bolder 40px "Lucida Sans", "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande", Arial, sans-serif;
-  letter-spacing: -3px;
-  background: linear-gradient(to right, #f50ca0, #43dde2);
+  font-family: "Raleway-Black";
+  font: bolder;
+  font-size: 40px;
+  /* background: linear-gradient(to right, #f50ca0, #43dde2); */
+  background: linear-gradient(to right, #ffea00, #43aa8b, #fd151b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
@@ -48,74 +45,92 @@ h1 {
 }
 
 .todo-input {
-display: flex;
-align-items: center;
-height: 80px;
+  display: flex;
+  align-items: center;
+  height: 80px;
   background-color: rgb(31, 32, 36);
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .todo-add {
   width: 50%;
   display: flex;
-align-items: center;
-justify-content: flex-end;
-margin-right: 15px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 15px;
 }
 
 #date-input {
   height: 56px;
   padding: 3px 10px;
-  background-color: #030000;
-  color: #dfd7bf;
+  background-color: #0b090a;
+  color: #f8f9fa;
   font-size: 16px;
   border-radius: 10px;
   border: none;
   outline: none;
 }
 
+#date-input:hover {
+  background-color: rgba(3, 0, 0, 0.6);
+}
+
 ::-webkit-calendar-picker-indicator {
-  background-color: #fff;
+  background-color: #f8f9fa;
   padding: 5px;
   margin-left: -10px;
   border-radius: 5px;
 }
 
 .add-button {
-  background-color: #030000;
+  background-color: #0b090a;
   padding: 15px 30px;
   border-radius: 10px;
   font-size: 20px;
   font-weight: 700;
-  color: white;
+  color: #f8f9fa;
   cursor: pointer;
-  margin-left: 20px; 
+  margin-left: 20px;
+  border: none;
+}
+
+.add-button:hover {
+  background-color: rgba(3, 0, 0, 0.6);
 }
 
 .todo-buttons {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.todo-buttons button{
+.todo-buttons button {
   background-color: rgb(31, 32, 36);
-  color: #fff;
+  color: #f8f9fa;
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 1rem;
-  background-color: #1f2024;
-  color: #fff;
-  font-weight: 600;
+  color: #f8f9fa;
+  cursor: pointer;
+  border: none;
+}
+
+.todo-buttons button:hover {
+  background-color: rgba(31, 32, 36, 0.6);
 }
 
 #delete-all {
- background-color: #1f2024;
- color: #303030;
- color: #fff;
- font-weight: 600;
- font-size: 1rem;
+  background-color: #1f2024;
+  color: #303030;
+  color: #f8f9fa;
+  /* font-weight: 600; */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#delete-all:hover {
+  background-color: rgba(31, 32, 36, 0.6);
 }
 
 table {
@@ -123,13 +138,12 @@ table {
 }
 
 thead {
-  background: linear-gradient(to right, #f50ca0, #43dde2);
+  background: #030000;
   font-size: 1.1rem;
 }
 
 thead th {
   padding: 10px;
-color: black;
 }
 
 thead th:first-child {
@@ -141,9 +155,10 @@ thead th:last-child {
 }
 
 tbody td {
-  background-color: var(--color-task);
+  border: 1px solid rgb(50, 49, 49);
   padding: 5px 10px;
   text-align: center;
+  width: 25%;
 }
 
 tbody td button {
@@ -163,14 +178,25 @@ tbody td button:nth-child(3) {
   background-color: var(--color-error);
 }
 
+img {
+  margin-right: 15px;
+}
 
+tbody td img:nth-child(1) {
+  width: 23px;
+}
 
+tbody td img:nth-child(2) {
+  width: 30px;
+}
 
+tbody td img:nth-child(3) {
+  width: 30px;
+}
 
-
-
-
-
-
-
-
+tbody td:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
