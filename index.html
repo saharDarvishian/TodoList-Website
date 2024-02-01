@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo app</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/font.css" />
   </head>
   <body>
     <div id="todo-container">
       <h1>Todo app</h1>
       <div class="todo-input">
-        <input type="text" placeholder="Task name" id="todo-tasks" />
+        <input type="text" placeholder="Task name" id="task-input" />
         <div class="todo-add">
           <input type="date" id="date-input" />
           <button class="add-button">Add</button>
@@ -28,28 +28,18 @@
         <button id="delete-all">Delete All</button>
       </div>
     </div>
+    <div class="show-alert"></div>
     <div class="table">
       <table>
-        <!-- <thead>
+        <thead>
           <tr>
             <th>Task</th>
             <th>Date</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
-        </thead> -->
-        <tbody>
-          <tr>
-            <td>Task</td>
-            <td>Date</td>
-            <td>Status</td>
-            <td>
-              <img src="./images/icons8-edit-32.png">
-              <img src="./images/icons8-checkmark-64.png">
-              <img src="./images/icons8-delete-64 (2).png">
-            </td>
-          </tr>
-        </tbody>
+        </thead>
+        <tbody></tbody>
       </table>
     </div>
 

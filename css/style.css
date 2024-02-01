@@ -16,7 +16,7 @@ body {
 }
 
 #todo-container {
-  margin: 0 auto 40px;
+  margin: 0 auto;
   border-radius: 8px;
 }
 
@@ -31,7 +31,7 @@ h1 {
   width: fit-content;
 }
 
-#todo-tasks {
+#task-input {
   width: 50%;
   height: 80px;
   background-color: #1f2024;
@@ -138,48 +138,49 @@ table {
 }
 
 thead {
-  background: #030000;
-  font-size: 1.1rem;
+  color: gray;
+}
+thead:hover {
+  background-color: rgba(11, 9, 10, 0.5);
+  cursor: pointer;
 }
 
 thead th {
   padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid;
+  border-image: linear-gradient(to right, #ffea00, #43aa8b, #fd151b) 1;
 }
 
-thead th:first-child {
+thead th:nth-child(1) {
   border-top-left-radius: 10px;
 }
 
-thead th:last-child {
+thead th:nth-child(1):hover {
+  background-color: rgba(11, 9, 10, 0.5);
+}
+
+thead th:nth-child(2):hover {
+  background-color: rgba(11, 9, 10, 0.5);
+}
+
+thead th:nth-child(3) {
   border-top-right-radius: 10px;
+}
+thead th:nth-child(3):hover {
+  background-color: rgba(11, 9, 10, 0.5);
 }
 
 tbody td {
-  border: 1px solid rgb(50, 49, 49);
-  padding: 5px 10px;
+  border: 1px solid rgb(31, 32, 36);
+  padding: 8px 10px;
   text-align: center;
   width: 25%;
 }
 
-tbody td button {
-  padding: 4px 8px;
-  margin: 2px 5px;
-}
-
-tbody td button:nth-child(1) {
-  background-color: var(--color-warning);
-}
-
-tbody td button:nth-child(2) {
-  background-color: var(--color-success);
-}
-
-tbody td button:nth-child(3) {
-  background-color: var(--color-error);
-}
-
 img {
   margin-right: 15px;
+  cursor: pointer;
 }
 
 tbody td img:nth-child(1) {
@@ -199,4 +200,29 @@ tbody td:last-child {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.show-alert {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.alert {
+  width: 100%;
+  text-align: center;
+  color: #0b090a;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.alert-success {
+  background-color: #43aa8b;
+}
+
+.alert-error {
+  background-color: rgba(253, 21, 27, 0.7);
 }
