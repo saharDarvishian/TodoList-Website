@@ -158,24 +158,27 @@ tbody td {
   width: 25%;
 }
 
+#images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 img {
   margin-right: 15px;
   cursor: pointer;
-
 }
 
-tbody td img:nth-child(1) {
+tbody #images img:nth-child(1) {
   width: 23px;
-  padding-bottom: 4px;
 }
 
-tbody td img:nth-child(2) {
+tbody #images img:nth-child(2) {
   width: 28px;
 }
 
-tbody td img:nth-child(3) {
+tbody #images img:nth-child(3) {
   width: 30px;
-  padding-top: 7px;
 }
 
 .show-alert {

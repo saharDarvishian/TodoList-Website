@@ -109,18 +109,20 @@ const displayTodos = (data) => {
         <td>${todo.task}</td>
         <td>${todo.date || "No date"}</td>
         <td>${todo.completed ? "completed" : "Pending"}</td>
-        <td id="last-child">
-          <img onclick="editHandler('${todo.id}')"
-            src="./images/icons8-edit-32.png" />
+        <td>
+          <div id="images">
+             <img onclick="editHandler('${todo.id}')"
+              src="./images/icons8-edit-32.png" />
 
-          <img onclick="toggleHandler('${todo.id}')" 
-             src=${
-               todo.completed
+              <img onclick="toggleHandler('${todo.id}')" 
+               src=${
+                todo.completed
                  ? "./images/icons8-checkmark-64.png"
                  : "./images/circle.png"
-             } />       
-          <img onclick="deleteHandler('${todo.id}')"
-           src="./images/icons8-delete-64 (2).png" />
+                } />       
+               <img onclick="deleteHandler('${todo.id}')"
+              src="./images/icons8-delete-64 (2).png" />
+           </div>
         </td>
       </tr> 
       `;
