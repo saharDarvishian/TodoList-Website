@@ -16,14 +16,15 @@
         <div class="todo-add">
           <input type="date" id="date-input" />
           <button class="add-button">Add</button>
+          <button class="edit-button">Edit</button>
         </div>
       </div>
 
       <div class="todo-buttons">
         <div>
-          <button>All</button>
-          <button>Pendeing</button>
-          <button>Completed</button>
+          <button class="filter-todos" data-filter="all">All</button>
+          <button class="filter-todos" data-filter="pending">Pendeing</button>
+          <button class="filter-todos" data-filter="completed">Completed</button>
         </div>
         <button id="delete-all">Delete All</button>
       </div>
