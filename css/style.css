@@ -2,11 +2,12 @@
 *:before,
 *:after {
   padding: 0;
-  margin: o;
+  margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: #0a0908;
+  background-color: #03071e;
   height: 100vh;
   font-family: sans-serif;
   color: #f8f9fa;
@@ -17,40 +18,48 @@ body {
 
 #todo-container {
   border-radius: 8px;
+  border: 1px solid rgb(31, 32, 36);
+  padding: 0 10px;
 }
 
 #hamburgure h1 {
-  font-family: "Raleway-Black";
+  font-family: cursive;
   font: bolder;
   font-size: 40px;
-  /* background: linear-gradient(to right, #f50ca0, #43dde2); */
-  background: linear-gradient(to right, #ffea00, #43aa8b, #fd151b);
+  background: linear-gradient(to right, #f50ca0, #43dde2);
+  /* background: linear-gradient(to right, #ffea00, #43aa8b, #fd151b); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
-}
-
-#task-input {
-  width: 50%;
-  height: 80px;
-  background-color: rgb(31, 32, 36);
-  padding: 10px 15px;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  color: #fef5ea;
-  font-size: 20px;
-  font-weight: 500;
+  margin: 30px 0;
 }
 
 .todo-input {
+  width: auto;
   display: flex;
   align-items: center;
-  height: 80px;
+  /* flex-direction: column; */
+  /* height: 80px; */
   background-color: rgb(31, 32, 36);
   border-radius: 10px;
   margin-bottom: 15px;
   /* border: 1px solid white; */
+}
+
+#task-input {
+  width: 50%;
+  /* height: 80px; */
+  background-color: rgba(245, 12, 160, 0.5);
+  /* background-color: rgba(16, 30, 113, 0.8); */
+  /* background-color: #efc3e6; */
+  padding: 25px 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: #03071e;
+  font-size: 20px;
+  font-weight: 500;
+  /* border: 1px solid red; */
 }
 
 .todo-add {
@@ -58,23 +67,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 15px;
-  /* border: 1px solid white; */
+  padding: 10px 15px;
+  border-radius: 10px;
+  /* border: 1px solid blue; */
 }
 
 #date-input {
-  height: 56px;
-  padding: 3px 10px;
+  padding: 12px 10px;
   background-color: #0a0908;
   color: #fef5ea;
-  font-size: 16px;
-  border-radius: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
   border: none;
   outline: none;
 }
 
 #date-input:hover {
-  background-color: rgba(3, 0, 0, 0.6);
+  background-color: rgba(3, 0, 0, 0.5);
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -85,20 +94,22 @@ body {
 }
 
 .add-button {
-  background-color: #0a0908;
-  padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fef5ea;
+  background-color: rgb(245, 12, 160, 0.5);
+  /* background-color: #efc3e6; */
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #43dde2;
+  /* color: #03071e; */
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 15px;
   border: none;
 }
 
-.add-button:hover {
+/* .add-button:hover {
   background-color: rgba(3, 0, 0, 0.6);
-}
+} */
 
 .todo-buttons {
   display: flex;
@@ -110,7 +121,7 @@ body {
   background-color: rgb(31, 32, 36);
   color: #fef5ea;
   padding: 10px 15px;
-  /* border-radius: 10px; */
+  border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
@@ -139,14 +150,16 @@ table {
 }
 
 thead {
-  color: gray;
+  color: gray; 
 }
 
 thead th {
   padding: 10px;
+  border-radius: 5px;
   font-size: 1.2rem;
   border: 1px solid;
-  border-image: linear-gradient(to right, #ffea00, #43aa8b, #fd151b) 1;
+  /* border-image: linear-gradient(to right, #ffea00, #43aa8b, #fd151b) 1; */
+  border-image: linear-gradient(to right, #f50ca0, #43dde2) 1;
 }
 
 tbody {
@@ -155,7 +168,7 @@ tbody {
 
 tbody td {
   border: 1px solid rgb(31, 32, 36);
-  padding: 8px 10px;
+  padding: 12px 10px;
   text-align: center;
   width: 25%;
 }
@@ -176,11 +189,11 @@ tbody #images img:nth-child(1) {
 }
 
 tbody #images img:nth-child(2) {
-  width: 28px;
+  width: 26px;
 }
 
 tbody #images img:nth-child(3) {
-  width: 30px;
+  width: 29px;
 }
 
 .show-alert {
@@ -209,14 +222,16 @@ tbody #images img:nth-child(3) {
 }
 
 .edit-button {
-  background-color: #0b090a;
-  padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fef5ea;
+  background-color: rgb(245, 12, 160, 0.5);
+  /* background-color: #efc3e6; */
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #43dde2;
+  /* color: #03071e; */
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 15px;
   border: none;
   display: none;
 }
@@ -225,44 +240,66 @@ tbody #images img:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: relative; 
 }
 
-#hamburgure img {
+#hamburger-img {
   width: 50px;
   margin-right: 0;
-}
-
-#hamburgure-items {
-  background-color: rgba(31, 32, 36);
-  background: linear-gradient(#ffea00, #43aa8b, #fd151b);
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid white; */
-  width: 300px;
-  padding: 30px 15px 30px;
-  position: absolute;
-  right: 0;
-  top: 80px;
   display: none;
 }
 
-#hamburgure-items button {
-  display: inline-block;
-  color: #333;
-  background-color: rgba(31, 32, 36, 0);
+#hamburger-img::before {
+  /* content: "urlicons8-arw-16.png"ro; */
+} 
+
+.hamburger-items {
+  /* background-color: rgb(245, 12, 160); */
+  background-color: #f1faee;
+  /* border-image: linear-gradient(to right, #f50ca0, #43dde2) 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 88px;
+  display: none;
+  padding: 8px;
+}
+
+.hm-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hm-btn1 {
+  margin-bottom: 10px;
+}
+
+.display{
+  display: block;
+}
+
+.hamburger-items button {
+ width: 100px;
+ border-radius: 5px;
+  color: #43dde2;
+  color: #f1faee;
+  background-color: rgb(3, 7, 30);
   padding: 10px 15px;
   /* border-radius: 10px; */
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
-  margin-bottom: 25px;
+  /* margin-bottom: 10px; */
   text-align: left;
   transition: all 0.3s ease-in;
 }
 
-#hamburgure-items button:hover {
+.hamburger-items button:hover {
   background-color: rgba(10, 9, 8, 0.8);
   color: #f8f9fa;
 }

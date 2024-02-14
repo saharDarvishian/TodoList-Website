@@ -60,18 +60,19 @@
     }
   }
 
-@media (max-width: 420px) {
-body {
-  margin: 0 15px;
-}
+  @media (max-width: 360px) {
+    body {
+      margin: 20px;
+    }
 
-#hamburgure h1 {
-  font-size: 1.7rem;
-}
+    #hamburgure h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      font-family: cursive;
+    }
 
-.add-button {
-      font-size: 0.9rem;
-      padding: 10px 15px;
+    .add-button, .edit-button {
+     
     }
 
     .todo-buttons button {
@@ -79,39 +80,37 @@ body {
     }
 
     .todo-input {
-      flex-direction: column;
+      /* flex-direction: column; */
       margin-bottom: 70px;
       height: 0;
-
     }
 
     .todo-add {
-      background-color: rgb(31, 32, 36);
-      /* width: 100%; */
-      /* justify-content: space-between; */
-      /* padding: 10px 0; */
-      /* height: 45px; */
       width: 100px;
-      margin: 0;
-      padding: 0;
       border-radius: 5px;
     }
 
-    .add-button {
-      background-color: rgb(31, 32, 36);
+    .add-button, .edit-button {
+      /* background-color: #f4acb7; */
+      font-size: 0.9rem;
+      padding: 11px 15px;
       width: 100%;
       border-radius: 10px;
+      color: #43dde2;
+      font-family: cursive;
       margin: 0;
-      padding: 0;
-      color: gray;
     }
 
     #task-input {
       height: 40px;
       width: 100%;
       padding: 20px 10px;
-      border-radius: 0;
+      /* border-radius: 0; */
       border-radius: 5px;
+      color: #43dde2;
+      /* color: #03071e; */
+      font-size: 0.9rem;
+      font-weight: 400;
     }
 
     #date-input {
@@ -121,8 +120,8 @@ body {
     }
 
     .todo-add {
-      margin: 10px 0 ;
-      padding: 10px;
+      /* margin: 10px 0; */
+      padding: 0 10px;
     }
 
     .todo-add button {
@@ -130,16 +129,39 @@ body {
     }
 
     thead tr th {
-      width: 50%;
+      width: 80%;
       text-align: left;
+    }
+
+    thead tr th:last-child {
+      text-align: center; 
+      width: 20%;
     }
 
     tbody td {
       font-size: 0.9rem;
+      text-align: left;
+    }
+
+    tbody td:last-child {
+      text-align: right;
+      width: 20%;
+    }
+
+    tbody td:first-child {
+      width: 80%;
     }
 
     thead tr th:nth-child(2) {
       display: none;
+    }
+
+    #images img {
+      margin-right: 5px;
+    }
+
+    #images img:last-child {
+      margin-right: 0;
     }
 
     thead tr th:nth-child(3) {
@@ -154,9 +176,9 @@ body {
       display: none;
     }
 
-    #images img:nth-child(2) {
-      display: none;
+    #hamburger-img {
+      display: block;
     }
-  
-}
+
+  }
 }

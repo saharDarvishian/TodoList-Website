@@ -13,19 +13,27 @@
     <div id="todo-container">
       <div id="hamburgure">
         <h1>Todo app</h1>
-        <img src="./images/burger-menu-svgrepo-com.svg" alt="" />
-        <div id="hamburgure-items">
-          <button class="filter-todos" data-filter="all">All</button>
-          <button class="filter-todos" data-filter="pending">Pendeing</button>
-          <button class="filter-todos" data-filter="completed">Completed</button>
-          <button id="delete-all">Delete All</button>
+        <img id="hamburger-img" src="./images/burger-menu-svgrepo-com.svg" />
+        <div class="hamburger-items">
+
+          <div class="hm-btn hm-btn1">
+            <button class="filter-todos" data-filter="all">All</button>
+          <button class="delete-all">Delete All</button>
+          </div>
+
+          <div class="hm-btn">
+            <button class="filter-todos" data-filter="pending">Pendeing</button>
+            <button class="filter-todos" data-filter="completed">
+              Completed
+            </button>
+          </div>
         </div>
       </div>
 
       <div class="todo-input">
-        <input type="text" placeholder="Task name" id="task-input" />
+        <input id="task-input" type="text" />
         <div class="todo-add">
-          <input type="date" id="date-input" />
+          <input id="date-input" type="date" />
           <button class="add-button">Add</button>
           <button class="edit-button">Edit</button>
         </div>

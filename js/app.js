@@ -6,6 +6,10 @@ const todosBody = document.querySelector("tbody");
 const deleteAll = document.querySelector(".delete-all");
 const editButton = document.querySelector(".edit-button");
 const filterButton = document.querySelectorAll(".filter-todos");
+const hamburgerImg = document.getElementById("hamburger-img");
+console.log(hamburgerImg);
+const hamburgerItems = document.querySelector(".hamburger-items");
+console.log(hamburgerItems);
 
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
@@ -101,7 +105,8 @@ const displayTodos = (data) => {
   const todosList = data || todos;
   todosBody.innerHTML = "";
   if (!todosList.length) {
-    todosBody.innerHTML = "<tr><td style='color:gray' colspan='4'>No task found!</td></tr>";
+    todosBody.innerHTML =
+      "<tr><td style='color:gray; text-align:center' colspan='4'>No task found!</td></tr>";
   } else {
     todosList.forEach((todo) => {
       todosBody.innerHTML += `
@@ -112,16 +117,16 @@ const displayTodos = (data) => {
         <td>
           <div id="images">
              <img onclick="editHandler('${todo.id}')"
-              src="./images/icons8-edit-32.png" />
+              src="./images/icons8-edit-48.png" />
 
               <img onclick="toggleHandler('${todo.id}')" 
                src=${
-                todo.completed
-                 ? "./images/icons8-checkmark-64.png"
-                 : "./images/circle.png"
-                } />       
+                 todo.completed
+                   ? "./images/icons8-checkmark-50.png"
+                   : "./images/icons8-circle-50.png"
+               } />       
                <img onclick="deleteHandler('${todo.id}')"
-              src="./images/icons8-delete-64 (2).png" />
+              src="./images/icons8-delete-64 (3).png" />
            </div>
         </td>
       </tr> 
@@ -153,6 +158,10 @@ const addHandler = () => {
   }
 };
 
+const showHamburgerMenu = () => {
+  hamburgerItems.classList.toggle("display");
+};
+
 window.addEventListener("load", () => displayTodos());
 addButton.addEventListener("click", addHandler);
 deleteAll.addEventListener("click", deleteAllHandler);
@@ -160,3 +169,4 @@ editButton.addEventListener("click", applyHandler);
 filterButton.forEach((button) => {
   button.addEventListener("click", filterHandler);
 });
+hamburgerImg.addEventListener("click", showHamburgerMenu);
