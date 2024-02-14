@@ -7,9 +7,7 @@ const deleteAll = document.querySelector(".delete-all");
 const editButton = document.querySelector(".edit-button");
 const filterButton = document.querySelectorAll(".filter-todos");
 const hamburgerImg = document.getElementById("hamburger-img");
-console.log(hamburgerImg);
 const hamburgerItems = document.querySelector(".hamburger-items");
-console.log(hamburgerItems);
 
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
@@ -170,3 +168,5 @@ filterButton.forEach((button) => {
   button.addEventListener("click", filterHandler);
 });
 hamburgerImg.addEventListener("click", showHamburgerMenu);
+
+

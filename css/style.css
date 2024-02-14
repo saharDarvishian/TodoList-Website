@@ -1,3 +1,7 @@
+:root {
+  color-scheme: only light;
+}
+
 *,
 *:before,
 *:after {
@@ -19,7 +23,8 @@ body {
 #todo-container {
   border-radius: 8px;
   border: 1px solid rgb(31, 32, 36);
-  padding: 0 10px;
+  padding: 0 10px 15px;
+  margin-top: 30px;
 }
 
 #hamburgure h1 {
@@ -27,55 +32,49 @@ body {
   font: bolder;
   font-size: 40px;
   background: linear-gradient(to right, #f50ca0, #43dde2);
-  /* background: linear-gradient(to right, #ffea00, #43aa8b, #fd151b); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
   margin: 30px 0;
+  color-scheme: only light;
 }
 
 .todo-input {
   width: auto;
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
-  /* height: 80px; */
-  background-color: rgb(31, 32, 36);
   border-radius: 10px;
   margin-bottom: 15px;
-  /* border: 1px solid white; */
 }
 
 #task-input {
   width: 50%;
-  /* height: 80px; */
   background-color: rgba(245, 12, 160, 0.5);
-  /* background-color: rgba(16, 30, 113, 0.8); */
-  /* background-color: #efc3e6; */
   padding: 25px 15px;
   border: none;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   outline: none;
   color: #03071e;
   font-size: 20px;
   font-weight: 500;
-  /* border: 1px solid red; */
 }
 
 .todo-add {
+  background-color: rgba(245, 12, 160, 0.5);
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 10px 15px;
-  border-radius: 10px;
-  /* border: 1px solid blue; */
+  padding: 10.5px 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #date-input {
+  background-color: #03071e;
   padding: 12px 10px;
-  background-color: #0a0908;
-  color: #fef5ea;
+  color: #43dde2;
   font-size: 1.1rem;
   border-radius: 8px;
   border: none;
@@ -87,15 +86,14 @@ body {
 }
 
 ::-webkit-calendar-picker-indicator {
-  background-color: #fef5ea;
+  background-color: #43dde2;
   padding: 5px;
   margin-left: -10px;
   border-radius: 5px;
 }
 
 .add-button {
-  background-color: rgb(245, 12, 160, 0.5);
-  /* background-color: #efc3e6; */
+  background-color: #03071e;
   padding: 14px 20px;
   border-radius: 8px;
   font-size: 1.2rem;
@@ -107,10 +105,6 @@ body {
   border: none;
 }
 
-/* .add-button:hover {
-  background-color: rgba(3, 0, 0, 0.6);
-} */
-
 .todo-buttons {
   display: flex;
   justify-content: space-between;
@@ -118,24 +112,24 @@ body {
 }
 
 .todo-buttons button {
-  background-color: rgb(31, 32, 36);
-  color: #fef5ea;
+  background-color: rgb(3, 7, 30);
+  border: 1px solid rgb(31, 32, 36);
+  /* color: #43dde2; */
+  color: gray;
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  border: none;
   margin-right: 5px;
 }
 
 .todo-buttons button:hover {
-  background-color: rgba(31, 32, 36, 0.6);
+  background-color: rgba(3, 7, 30, 0.5);
 }
 
 #delete-all {
   background-color: #1f2024;
   color: #303030;
-  color: #fef5ea;
   font-size: 1rem;
   cursor: pointer;
   margin-right: 0;
@@ -222,7 +216,7 @@ tbody #images img:nth-child(3) {
 }
 
 .edit-button {
-  background-color: rgb(245, 12, 160, 0.5);
+  background-color: #03071e;
   /* background-color: #efc3e6; */
   padding: 16px 20px;
   border-radius: 8px;
@@ -249,14 +243,8 @@ tbody #images img:nth-child(3) {
   display: none;
 }
 
-#hamburger-img::before {
-  /* content: "urlicons8-arw-16.png"ro; */
-} 
-
-.hamburger-items {
-  /* background-color: rgb(245, 12, 160); */
+ .hamburger-items {
   background-color: #f1faee;
-  /* border-image: linear-gradient(to right, #f50ca0, #43dde2) 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -289,12 +277,10 @@ tbody #images img:nth-child(3) {
   color: #f1faee;
   background-color: rgb(3, 7, 30);
   padding: 10px 15px;
-  /* border-radius: 10px; */
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
-  /* margin-bottom: 10px; */
   text-align: left;
   transition: all 0.3s ease-in;
 }
