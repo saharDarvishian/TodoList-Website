@@ -101,7 +101,7 @@ const displayTodos = (data) => {
   const todosList = data || todos;
   todosBody.innerHTML = "";
   if (!todosList.length) {
-    todosBody.innerHTML = "<tr><td colspan='4'>No task found!</td></tr>";
+    todosBody.innerHTML = "<tr><td style='color:gray' colspan='4'>No task found!</td></tr>";
   } else {
     todosList.forEach((todo) => {
       todosBody.innerHTML += `

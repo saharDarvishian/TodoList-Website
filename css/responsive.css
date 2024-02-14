@@ -15,6 +15,7 @@
 
     .add-button {
       font-size: 1.1rem;
+      padding: 12px 20px;
     }
 
     .todo-buttons button,
@@ -32,9 +33,6 @@
 
     #task-input {
       height: 60px;
-    }
-    .add-button {
-      padding: 12px 20px;
     }
 
     #date-input {
@@ -61,4 +59,104 @@
       width: 26px;
     }
   }
+
+@media (max-width: 420px) {
+body {
+  margin: 0 15px;
+}
+
+#hamburgure h1 {
+  font-size: 1.7rem;
+}
+
+.add-button {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+
+    .todo-buttons button {
+      display: none;
+    }
+
+    .todo-input {
+      flex-direction: column;
+      margin-bottom: 70px;
+      height: 0;
+
+    }
+
+    .todo-add {
+      background-color: rgb(31, 32, 36);
+      /* width: 100%; */
+      /* justify-content: space-between; */
+      /* padding: 10px 0; */
+      /* height: 45px; */
+      width: 100px;
+      margin: 0;
+      padding: 0;
+      border-radius: 5px;
+    }
+
+    .add-button {
+      background-color: rgb(31, 32, 36);
+      width: 100%;
+      border-radius: 10px;
+      margin: 0;
+      padding: 0;
+      color: gray;
+    }
+
+    #task-input {
+      height: 40px;
+      width: 100%;
+      padding: 20px 10px;
+      border-radius: 0;
+      border-radius: 5px;
+    }
+
+    #date-input {
+      height: 35px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .todo-add {
+      margin: 10px 0 ;
+      padding: 10px;
+    }
+
+    .todo-add button {
+      border-radius: 5px;
+    }
+
+    thead tr th {
+      width: 50%;
+      text-align: left;
+    }
+
+    tbody td {
+      font-size: 0.9rem;
+    }
+
+    thead tr th:nth-child(2) {
+      display: none;
+    }
+
+    thead tr th:nth-child(3) {
+      display: none;
+    }
+
+    tbody tr td:nth-child(2) {
+      display: none;
+    }
+
+    tbody tr td:nth-child(3) {
+      display: none;
+    }
+
+    #images img:nth-child(2) {
+      display: none;
+    }
+  
+}
 }

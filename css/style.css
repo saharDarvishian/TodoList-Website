@@ -33,7 +33,7 @@ body {
 #task-input {
   width: 50%;
   height: 80px;
-  background-color: #1f2024;
+  background-color: rgb(31, 32, 36);
   padding: 10px 15px;
   border: none;
   outline: none;
@@ -48,8 +48,9 @@ body {
   align-items: center;
   height: 80px;
   background-color: rgb(31, 32, 36);
-  /* border-radius: 10px; */
+  border-radius: 10px;
   margin-bottom: 15px;
+  /* border: 1px solid white; */
 }
 
 .todo-add {
@@ -58,6 +59,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   margin-right: 15px;
+  /* border: 1px solid white; */
 }
 
 #date-input {
@@ -242,7 +244,7 @@ tbody #images img:nth-child(3) {
   position: absolute;
   right: 0;
   top: 80px;
-  /* display: none; */
+  display: none;
 }
 
 #hamburgure-items button {
