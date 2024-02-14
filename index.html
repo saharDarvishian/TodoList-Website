@@ -7,10 +7,21 @@
     <title>Todo app</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <div id="todo-container">
-      <h1>Todo app</h1>
+      <div id="hamburgure">
+        <h1>Todo app</h1>
+        <img src="./images/burger-menu-svgrepo-com.svg" alt="" />
+        <div id="hamburgure-items">
+          <button class="filter-todos" data-filter="all">All</button>
+          <button class="filter-todos" data-filter="pending">Pendeing</button>
+          <button class="filter-todos" data-filter="completed">Completed</button>
+          <button id="delete-all">Delete All</button>
+        </div>
+      </div>
+
       <div class="todo-input">
         <input type="text" placeholder="Task name" id="task-input" />
         <div class="todo-add">
@@ -24,9 +35,11 @@
         <div>
           <button class="filter-todos" data-filter="all">All</button>
           <button class="filter-todos" data-filter="pending">Pendeing</button>
-          <button class="filter-todos" data-filter="completed">Completed</button>
+          <button class="filter-todos" data-filter="completed">
+            Completed
+          </button>
         </div>
-        <button id="delete-all">Delete All</button>
+        <button class="delete-all">Delete All</button>
       </div>
     </div>
     <div class="show-alert"></div>

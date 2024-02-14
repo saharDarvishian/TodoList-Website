@@ -10,17 +10,16 @@ body {
   height: 100vh;
   font-family: sans-serif;
   color: #f8f9fa;
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   font-family: "Raleway-Regular";
 }
 
 #todo-container {
-  margin: 0 auto;
   border-radius: 8px;
 }
 
-h1 {
+#hamburgure h1 {
   font-family: "Raleway-Black";
   font: bolder;
   font-size: 40px;
@@ -49,7 +48,7 @@ h1 {
   align-items: center;
   height: 80px;
   background-color: rgb(31, 32, 36);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin-bottom: 15px;
 }
 
@@ -109,11 +108,11 @@ h1 {
   background-color: rgb(31, 32, 36);
   color: #fef5ea;
   padding: 10px 15px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   font-size: 1rem;
-  color: #fef5ea;
   cursor: pointer;
   border: none;
+  margin-right: 5px;
 }
 
 .todo-buttons button:hover {
@@ -126,6 +125,7 @@ h1 {
   color: #fef5ea;
   font-size: 1rem;
   cursor: pointer;
+  margin-right: 0;
 }
 
 #delete-all:hover {
@@ -217,4 +217,50 @@ tbody #images img:nth-child(3) {
   margin-left: 20px;
   border: none;
   display: none;
+}
+
+#hamburgure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+#hamburgure img {
+  width: 50px;
+  margin-right: 0;
+}
+
+#hamburgure-items {
+  background-color: rgba(31, 32, 36);
+  background: linear-gradient(#ffea00, #43aa8b, #fd151b);
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid white; */
+  width: 300px;
+  padding: 30px 15px 30px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  /* display: none; */
+}
+
+#hamburgure-items button {
+  display: inline-block;
+  color: #333;
+  background-color: rgba(31, 32, 36, 0);
+  padding: 10px 15px;
+  /* border-radius: 10px; */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 25px;
+  text-align: left;
+  transition: all 0.3s ease-in;
+}
+
+#hamburgure-items button:hover {
+  background-color: rgba(10, 9, 8, 0.8);
+  color: #f8f9fa;
 }

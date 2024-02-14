@@ -3,7 +3,7 @@ const dateInput = document.getElementById("date-input");
 const addButton = document.querySelector(".add-button");
 const alertDiv = document.querySelector(".show-alert");
 const todosBody = document.querySelector("tbody");
-const deleteAll = document.getElementById("delete-all");
+const deleteAll = document.querySelector(".delete-all");
 const editButton = document.querySelector(".edit-button");
 const filterButton = document.querySelectorAll(".filter-todos");
 

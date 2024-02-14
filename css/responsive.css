@@ -1,0 +1,64 @@
+@media (max-width: 1100px) {
+  body {
+    width: auto;
+    margin: 0 80px;
+  }
+
+  .add-button {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 950px) {
+    #todo-container h1 {
+      font-size: 2rem;
+    }
+
+    .add-button {
+      font-size: 1.1rem;
+    }
+
+    .todo-buttons button,
+    #delete-all {
+      font-size: 0.8rem;
+    }
+
+    #task-input {
+      font-size: 1.1rem;
+    }
+
+    .todo-input {
+      height: 60px;
+    }
+
+    #task-input {
+      height: 60px;
+    }
+    .add-button {
+      padding: 12px 20px;
+    }
+
+    #date-input {
+      height: 45px;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+      padding: 3px;
+    }
+
+    thead th {
+      font-size: 1rem;
+    }
+
+    tbody #images img:nth-child(1) {
+      width: 20px;
+    }
+
+    tbody #images img:nth-child(2) {
+      width: 24px;
+    }
+
+    tbody #images img:nth-child(3) {
+      width: 26px;
+    }
+  }
+}
