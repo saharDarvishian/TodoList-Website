@@ -81,7 +81,7 @@ body {
 #date-input {
   background-color: rgb(3, 7, 30);
   padding: 12px 10px;
-  color: #43dde2;
+color: #e8e8e8;
   font-size: 1.1rem;
   border-radius: 8px;
   border: none;
@@ -94,7 +94,8 @@ body {
 }
 
 ::-webkit-calendar-picker-indicator {
-  background-color: #43dde2;
+  background-color:  #e8e8e8;;
+color: #e8e8e8;
   padding: 5px;
   margin-left: -10px;
   border-radius: 5px;
@@ -106,7 +107,7 @@ body {
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bolder;
-  color: #43dde2;
+  color: #e8e8e8;
   cursor: pointer;
   margin-left: 15px;
   border: none;
@@ -167,6 +168,7 @@ tbody {
 
 tbody td {
   padding: 12px 10px;
+  color: #e8e8e8;
   text-align: center;
   width: 25%;
   border: 1px solid rgb(31, 32, 36);
