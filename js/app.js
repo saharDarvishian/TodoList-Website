@@ -3,11 +3,13 @@ const dateInput = document.getElementById("date-input");
 const addButton = document.querySelector(".add-button");
 const alertDiv = document.querySelector(".show-alert");
 const todosBody = document.querySelector("tbody");
-const deleteAll = document.querySelector(".delete-all");
+const deleteAll = document.querySelectorAll(".delete-all");
 const editButton = document.querySelector(".edit-button");
 const filterButton = document.querySelectorAll(".filter-todos");
 const hamburgerImg = document.getElementById("hamburger-img");
 const hamburgerItems = document.querySelector(".hamburger-items");
+const body = document.querySelector("body")
+const label = document.querySelector("label")
 
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
@@ -20,6 +22,19 @@ const generateId = () => {
     Math.random() * Math.random() * Math.pow(10, 15)
   ).toString();
 };
+
+var typewriter = new Typewriter(label, {
+  loop: true,
+});
+
+typewriter
+  .typeString("Enter your task...")
+  .pauseFor(2000)
+  .deleteAll()
+  .typeString("Enter your task...")
+  .pauseFor(2000)
+  .deleteChars(7)
+  .start();
 
 const showAlert = (message, type) => {
   alertDiv.innerHTML = "";
@@ -35,6 +50,7 @@ const showAlert = (message, type) => {
 };
 
 const deleteAllHandler = () => {
+  console.log("sahar");
   todos = [];
   saveToLocalStorage();
   displayTodos();
@@ -74,7 +90,6 @@ const toggleHandler = (id) => {
   const todo = todos.find((todo) => todo.id === id);
   console.log(todo);
   todo.completed = !todo.completed;
-  console.log(todo);
   saveToLocalStorage();
   displayTodos();
   showAlert("Todo status changed successfully", "success");
@@ -111,7 +126,7 @@ const displayTodos = (data) => {
       <tr>
         <td>${todo.task}</td>
         <td>${todo.date || "No date"}</td>
-        <td>${todo.completed ? "completed" : "Pending"}</td>
+       
         <td>
           <div id="images">
              <img onclick="editHandler('${todo.id}')"
@@ -160,13 +175,25 @@ const showHamburgerMenu = () => {
   hamburgerItems.classList.toggle("display");
 };
 
+const closeHamburgureHandler = () => {
+  if (tagName === "IMG") return;
+  hamburgerItems.style.display = "none";
+};
+
+const removePlaceholder = () => {
+  label.style.display = "none"
+}
+
 window.addEventListener("load", () => displayTodos());
 addButton.addEventListener("click", addHandler);
-deleteAll.addEventListener("click", deleteAllHandler);
+deleteAll.forEach((button) => {
+  button.addEventListener("click", deleteAllHandler);
+});
 editButton.addEventListener("click", applyHandler);
 filterButton.forEach((button) => {
   button.addEventListener("click", filterHandler);
 });
 hamburgerImg.addEventListener("click", showHamburgerMenu);
-
-
+body.addEventListener("click", closeHamburgureHandler);
+label.addEventListener("click", removePlaceholder)
+taskInput.addEventListener("click", removePlaceholder)

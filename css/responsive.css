@@ -66,8 +66,14 @@
     tbody #images img:nth-child(3) {
       width: 26px;
     }
-  }
 
+    .customPh label {
+      top: 18px;
+font-size: 1rem;
+font-weight: 300;
+    }
+  }
+/* ------------------------------------------------------ */
   @media (max-width: 800px) {
     body {
       margin: 20px;
@@ -84,25 +90,39 @@
     }
 
     .todo-input {
-      /* flex-direction: column; */
-      margin-bottom: 70px;
+      margin-bottom: 25px;
       height: 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .customPh {
+      width:80%;
+    }
+
+    .customPh label {
+      top: 12px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: gray;
     }
 
     .todo-add {
-      width: 100px;
+      width: 80px;
       border-radius: 5px;
+      padding: 0 10px;
+      padding-right: 0;
       background-color: #03071e;
     }
 
     .add-button, .edit-button {
-      /* background-color: #f4acb7; */
-      background-color: rgba(245, 12, 160, 0.5);
+      background-color: #ffc8dd;
       font-size: 0.9rem;
-      padding: 11px 15px;
+      padding: 13px 15px;
       width: 100%;
       border-radius: 10px;
-      color: #43dde2;
+      color: #03071e;
       font-family: cursive;
       margin: 0;
     }
@@ -110,11 +130,8 @@
     #task-input {
       height: 40px;
       width: 100%;
-      padding: 20px 10px;
-      /* border-radius: 0; */
+      padding: 22px 10px;
       border-radius: 5px;
-      color: #43dde2;
-      /* color: #03071e; */
       font-size: 0.9rem;
       font-weight: 400;
     }
@@ -123,11 +140,6 @@
       height: 35px;
       border-radius: 5px;
       display: none;
-    }
-
-    .todo-add {
-      /* margin: 10px 0; */
-      padding: 0 10px;
     }
 
     .todo-add button {
@@ -166,24 +178,37 @@
       margin-right: 5px;
     }
 
-    #images img:last-child {
+   tbody #images img:nth-child(1) {
+width: 17px;
+    }
+
+   tbody #images img:nth-child(2) {
+      width: 18px;
+    }
+
+   tbody #images img:nth-child(3) {
       margin-right: 0;
+      width: 21px;
+      padding-top: 2px;
     }
 
-    thead tr th:nth-child(3) {
-      display: none;
-    }
-
+  
     tbody tr td:nth-child(2) {
-      display: none;
-    }
-
-    tbody tr td:nth-child(3) {
       display: none;
     }
 
     #hamburger-img {
       display: block;
+    }
+
+    ::placeholder {
+      font-size: 0.9rem;
+    }
+
+    .alert {
+      font-weight: 400;
+      font-size: 00.9rem;
+      color: #f1faee;
     }
 }
 }

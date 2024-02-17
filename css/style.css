@@ -17,13 +17,13 @@ body {
   color: #f8f9fa;
   max-width: 1000px;
   margin: auto;
-  font-family: "Raleway-Regular";
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #todo-container {
   border-radius: 8px;
   border: 1px solid rgb(31, 32, 36);
-  padding: 0 10px 15px;
+  padding: 0 10px 20px;
   margin-top: 30px;
 }
 
@@ -35,7 +35,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
-  margin: 30px 0;
+  margin: 15px 0;
   color-scheme: only light;
 }
 
@@ -44,24 +44,31 @@ body {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 #task-input {
-  width: 50%;
-  background-color: rgba(245, 12, 160, 0.5);
+  width: 100%;
+  background-color: #ffc8dd;
   padding: 25px 15px;
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   outline: none;
-  color: #03071e;
+  color: rgba(3, 7, 30, 0.8);
   font-size: 20px;
   font-weight: 500;
 }
 
+::placeholder {
+  color: rgba(3, 7, 30, 0.8);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
 .todo-add {
-  background-color: rgba(245, 12, 160, 0.5);
+  /* background-color: rgba(245, 12, 160, 0.5); */
+  background-color: #ffc8dd;
   width: 50%;
   display: flex;
   align-items: center;
@@ -72,17 +79,18 @@ body {
 }
 
 #date-input {
-  background-color: #03071e;
+  background-color: rgb(3, 7, 30);
   padding: 12px 10px;
   color: #43dde2;
   font-size: 1.1rem;
   border-radius: 8px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 #date-input:hover {
-  background-color: rgba(3, 0, 0, 0.5);
+  background-color: rgbش(3, 7, 30, 0.5);
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -99,7 +107,6 @@ body {
   font-size: 1.2rem;
   font-weight: bolder;
   color: #43dde2;
-  /* color: #03071e; */
   cursor: pointer;
   margin-left: 15px;
   border: none;
@@ -114,7 +121,6 @@ body {
 .todo-buttons button {
   background-color: rgb(3, 7, 30);
   border: 1px solid rgb(31, 32, 36);
-  /* color: #43dde2; */
   color: gray;
   padding: 10px 15px;
   border-radius: 5px;
@@ -127,7 +133,7 @@ body {
   background-color: rgba(3, 7, 30, 0.5);
 }
 
-#delete-all {
+.delete-all {
   background-color: #1f2024;
   color: #303030;
   font-size: 1rem;
@@ -135,7 +141,7 @@ body {
   margin-right: 0;
 }
 
-#delete-all:hover {
+.delete-all:hover {
   background-color: rgba(31, 32, 36, 0.6);
 }
 
@@ -144,7 +150,7 @@ table {
 }
 
 thead {
-  color: gray; 
+  color: gray;
 }
 
 thead th {
@@ -152,7 +158,6 @@ thead th {
   border-radius: 5px;
   font-size: 1.2rem;
   border: 1px solid;
-  /* border-image: linear-gradient(to right, #ffea00, #43aa8b, #fd151b) 1; */
   border-image: linear-gradient(to right, #f50ca0, #43dde2) 1;
 }
 
@@ -161,10 +166,22 @@ tbody {
 }
 
 tbody td {
-  border: 1px solid rgb(31, 32, 36);
   padding: 12px 10px;
   text-align: center;
   width: 25%;
+  border: 1px solid rgb(31, 32, 36);
+}
+
+tbody td:nth-child(1) {
+  width: 60%;
+}
+
+tbody td:nth-child(2) {
+  width: 20%;
+}
+
+tbody td:nth-child(3) {
+  width: 20%;
 }
 
 #images {
@@ -203,7 +220,7 @@ tbody #images img:nth-child(3) {
   text-align: center;
   color: #0b090a;
   font-weight: 700;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 8px;
 }
 
@@ -217,13 +234,11 @@ tbody #images img:nth-child(3) {
 
 .edit-button {
   background-color: #03071e;
-  /* background-color: #efc3e6; */
   padding: 16px 20px;
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bolder;
   color: #43dde2;
-  /* color: #03071e; */
   cursor: pointer;
   margin-left: 15px;
   border: none;
@@ -234,7 +249,7 @@ tbody #images img:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative; 
+  position: relative;
 }
 
 #hamburger-img {
@@ -243,49 +258,56 @@ tbody #images img:nth-child(3) {
   display: none;
 }
 
- .hamburger-items {
-  background-color: #f1faee;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.hamburger-items {
+  background-color: #ffc8dd;
+  width: auto;
   position: absolute;
   right: 0;
-  top: 88px;
+  top: 71px;
   display: none;
   padding: 8px;
+  border-radius: 5px;
+  z-index: 5;
 }
 
-.hm-btn {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hm-btn1 {
-  margin-bottom: 10px;
-}
-
-.display{
+.display {
   display: block;
 }
 
 .hamburger-items button {
- width: 100px;
- border-radius: 5px;
-  color: #43dde2;
+  width: 100px;
+  border-radius: 5px;
   color: #f1faee;
   background-color: rgb(3, 7, 30);
   padding: 10px 15px;
+  margin-bottom: 10px;
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
   text-align: left;
   transition: all 0.3s ease-in;
+  display: block;
 }
 
 .hamburger-items button:hover {
-  background-color: rgba(10, 9, 8, 0.8);
+  background-color: rgba(3, 7, 30, 0.8);
   color: #f8f9fa;
+}
+
+.customPh {
+  width: 50%;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.customPh label {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  color: gray;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 550;
+  font-family: monospace;
 }
